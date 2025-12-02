@@ -1,34 +1,446 @@
+
++84
+Lines changed: 84 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,84 @@
 <!DOCTYPE html>
-<html lang='pt-BR'>
+<html lang="pt-BR">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>ONG - Página Inicial</title>
-    <link rel='stylesheet' href='css/style.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caminho de Volta — Ajude pessoas em situação de rua</title>
+  <meta name="description" content="ONG Caminho de Volta — Dignidade, esperança e oportunidades para pessoas em situação de rua.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo à Nossa ONG</h1>
-        <nav>
-            <ul>
-                <li><a href='index.html'>Início</a></li>
-                <li><a href='projetos.html'>Projetos</a></li>
-                <li><a href='cadastro.html'>Cadastro</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Missão, Visão e Valores</h2>
-            <p>Nossa ONG trabalha para transformar vidas através de projetos sociais.</p>
-        </section>
-        <section>
-            <h2>Contato</h2>
-            <p>Email: contato@ong.org | Telefone: (11) 99999-9999</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nossa ONG</p>
-    </footer>
+  <!-- 🔗 Link de pular para o conteúdo principal -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <!-- Cabeçalho -->
+  <header class="container">
+    <h1>ONG Caminho de Volta</h1>
+    <p>Dignidade, esperança e oportunidades | Fundada em 2020</p>
+    <!-- 📸 Imagem principal -->
+    <figure>
+      <img src="imagens-da-ong/imagem29.png" alt="Equipe da ONG Caminho de Volta em ação, entregando doações e acolhendo pessoas em situação de rua" width="900" height="460">
+      <figcaption>Uma ONG que ajuda pessoas em situação de rua</figcaption>
+    </figure>
+  </header>
+  <!-- 🔗 Menu de Navegação -->
+  <nav id="menu" aria-label="Menu principal">
+    <ul>
+      <li><a href="#" data-page="inicio.html" class="ativo">Início</a></li>
+      <li><a href="#" data-page="sobre.html">Sobre</a></li>
+      <li><a href="#" data-page="projetos.html">Projetos</a></li>
+      <li><a href="#" data-page="voluntariado.html">Voluntariado</a></li>
+      <li><a href="#" data-page="doacoes.html">Doações</a></li>
+      <li><a href="#" data-page="contato.html">Contato</a></li>
+      <!-- 🔘 Botões de acessibilidade -->
+      <li class="separador" aria-hidden="true"></li>
+      <li><button id="btnTema" class="btn-acao" aria-pressed="false" aria-label="Alternar modo escuro">🌙 Modo escuro</button></li>
+      <li><button id="btnContraste" class="btn-acao" aria-pressed="false" aria-label="Ativar alto contraste">🌓 Alto contraste</button></li>
+    </ul>
+  </nav>
+  <!-- 🧩 Conteúdo principal (SPA) -->
+  <main id="conteudo" class="container">
+    <!-- Seção inicial ilustrativa -->
+    <section>
+      <h2>Seja parte da mudança</h2>
+      <p>Conheça nossas ações e veja como você pode colaborar com a ONG Caminho de Volta.</p>
+      <!-- 🖼️ Galeria de imagens de impacto -->
+      <div class="galeria">
+        <img src="imagens-da-ong/imagem35.jpg" alt="Voluntários servindo refeições a pessoas em situação de rua">
+        <img src="imagens-da-ong/imagem34.jpg" alt="Equipe da ONG organizando roupas e cobertores doados">
+        <img src="imagens-da-ong/imagem38.jpg" alt="Distribuição de cestas básicas e produtos de higiene">
+      </div>
+    </section>
+    <!-- 🌐 Redes Sociais -->
+    <section class="redes-container">
+      <h2>Redes Sociais</h2>
+      <p>Nos acompanhe e compartilhe esperança:</p>
+      <ul class="redes-sociais">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      </ul>
+    </section>
+  </main>
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Caminho de Volta — Todos os direitos reservados.</p>
+  </footer>
+  <!-- Scripts -->
+  <script src="JS/script.js" defer></script>
+  <script src="JS/mascaras.js" defer></script>
 </body>
 </html>
+‎paginas/contato.html‎
++66
+Lines changed: 66 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,66 @@
+<section class="container">
+  <h1>Contato</h1>
+  <p>Fale conosco e saiba como apoiar o Caminho de Volta.</p>
+  <!-- 🏠 Informações de contato -->
+  <section>
+    <h2>Entre em Contato</h2>
+    <address>
+      <p>📍 Rua das Flores, 200 - Centro, Belo Horizonte - MG</p>
+      <p>📞 (31) 9549-2448 | ✉️ contato@caminhodevolta.org.br</p>
+    </address>
+  </section>
+  <!-- 💬 Formulário de mensagem -->
+  <section>
+    <h2>Envie uma Mensagem</h2>
+    <form id="form-contato" autocomplete="on" novalidate>
+      <!-- DADOS PESSOAIS -->
+      <fieldset>
+        <legend>Dados do Contato</legend>
+        <label for="nomeContato">Nome completo</label>
+        <input type="text" id="nomeContato" name="nome" required minlength="2" placeholder="Seu nome completo">
+        <label for="emailContato">E-mail</label>
+        <input type="email" id="emailContato" name="email" required placeholder="seunome@exemplo.com">
+        <label for="telefoneContato">Telefone</label>
+        <input type="tel" id="telefoneContato" name="telefone" placeholder="(11) 99999-9999">
+      </fieldset>
+      <!-- MENSAGEM -->
+      <fieldset>
+        <legend>Mensagem</legend>
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto" required>
+          <option value="">Selecione</option>
+          <option value="doacao">Doação</option>
+          <option value="voluntariado">Voluntariado</option>
+          <option value="parceria">Parceria</option>
+          <option value="outro">Outro</option>
+        </select>
+        <label for="mensagemContato">Mensagem</label>
+        <textarea id="mensagemContato" name="mensagem" rows="5" required maxlength="1000" placeholder="Escreva sua mensagem..."></textarea>
+      </fieldset>
+      <button type="submit" class="btn-doar">Enviar Mensagem</button>
+    </form>
+    <p class="hint">💡 Sua mensagem será armazenada localmente e usada apenas para simulação de envio.</p>
+  </section>
+  <!-- 📋 Histórico de mensagens -->
+  <section>
+    <h2>Mensagens Recebidas</h2>
+    <!-- 🔥 Botão para limpar histórico -->
+    <button id="btnLimparContatos" class="btn-limpar">🗑️ Limpar histórico de mensagens</button>
+    <!-- 🧩 Lista dinâmica -->
+    <div id="lista-contatos"></div>
+  </section>
+</section>
+‎paginas/doacoes.html‎
++115
+Lines changed: 115 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,115 @@
+<section class="container">
+  <h1>Doações</h1>
+  <p>
+    A ONG Caminho de Volta dedica-se a apoiar pessoas em situação de rua, promovendo dignidade e esperança por meio de ações sociais.
+  </p>
+  <!-- 🖼️ Galeria ilustrativa -->
+  <div class="galeria">
+    <img src="imagens-da-ong/imagem30.jpg" alt="Pessoa realizando doação de alimentos para a ONG Caminho de Volta">
+    <img src="imagens-da-ong/imagem34.jpg" alt="Voluntários organizando mantimentos doados">
+    <img src="imagens-da-ong/imagem38.jpg" alt="Cestas básicas e produtos de higiene prontos para entrega">
+  </div>
+  <!-- 💰 Como Doar -->
+  <section>
+    <h2>Como Doar</h2>
+    <p>
+      Sua contribuição faz a diferença! As doações ajudam a manter nossos projetos sociais e podem ser feitas a partir de <strong>R$10,00</strong>.
+      Aceitamos pagamentos via <strong>PIX</strong>, <strong>cartão</strong> e <strong>boleto</strong>.
+    </p>
+  </section>
+  <!-- 📝 Formulário de Doação -->
+  <section aria-labelledby="form-doacao">
+    <h2 id="form-doacao">Faça Sua Doação Agora</h2>
+    <form id="formDoacao" autocomplete="on">
+      <!-- DADOS DO DOADOR -->
+      <fieldset>
+        <legend>Dados do Doador</legend>
+        <label for="cpfDoacao">CPF</label>
+        <input id="cpfDoacao" name="cpf" type="text" placeholder="000.000.000-00"
+          inputmode="numeric" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+          title="Formato: 000.000.000-00" required>
+        <label for="nomeDoacao">Nome Completo</label>
+        <input id="nomeDoacao" name="nome" type="text" minlength="3" maxlength="100" required>
+        <label for="emailDoacao">E-mail</label>
+        <input id="emailDoacao" name="email" type="email" placeholder="seunome@exemplo.com" required>
+        <label for="telefoneDoacao">Telefone</label>
+        <input id="telefoneDoacao" name="telefone" type="tel"
+          pattern="\([0-9]{2}\)\s?[0-9]{4,5}-[0-9]{4}"
+          title="Formato: (11) 99999-9999 ou (11) 9999-9999"
+          placeholder="(11) 99999-9999" required>
+      </fieldset>
+      <!-- ENDEREÇO -->
+      <fieldset>
+        <legend>Endereço (Opcional)</legend>
+        <label for="cepDoacao">CEP</label>
+        <input id="cepDoacao" name="cep" type="text" pattern="[0-9]{5}-[0-9]{3}"
+          title="Formato: 00000-000" placeholder="00000-000">
+        <label for="enderecoDoacao">Endereço</label>
+        <input id="enderecoDoacao" name="endereco" type="text">
+        <label for="bairroDoacao">Bairro</label>
+        <input id="bairroDoacao" name="bairro" type="text">
+        <label for="cidadeDoacao">Cidade</label>
+        <input id="cidadeDoacao" name="cidade" type="text">
+        <label for="ufDoacao">UF</label>
+        <select id="ufDoacao" name="uf">
+          <option value="">Selecione</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <option value="MG">MG</option>
+        </select>
+      </fieldset>
+      <!-- DETALHES DA DOAÇÃO -->
+      <fieldset>
+        <legend>Detalhes da Doação</legend>
+        <label for="valorDoacao">Valor (R$)</label>
+        <input id="valorDoacao" name="valor" type="number" min="10" max="10000" step="0.01"
+          placeholder="Ex: 50.00" required>
+        <label for="metodoPagamento">Método de Pagamento</label>
+        <select id="metodoPagamento" name="pagamento" required>
+          <option value="">Selecione</option>
+          <option value="pix">PIX</option>
+          <option value="cartao">Cartão</option>
+          <option value="boleto">Boleto</option>
+        </select>
+      </fieldset>
+      <!-- FREQUÊNCIA -->
+      <fieldset>
+        <legend>Frequência</legend>
+        <label><input type="radio" name="frequencia" value="unica" required> Única</label>
+        <label><input type="radio" name="frequencia" value="mensal"> Mensal</label>
+      </fieldset>
+      <button type="submit" class="btn-doar">Confirmar Doação</button>
+    </form>
+    <p class="hint">💡 Para produção, integre com um gateway de pagamento (ex.: PagSeguro, Stripe).</p>
+  </section>
+  <!-- 📊 Histórico de Doações -->
+  <section>
+    <h2>Histórico de Doações</h2>
+    <!-- 🔥 Botão de limpeza -->
+    <button id="btnLimparDoacoes" class="btn-limpar">🗑️ Limpar histórico de doações</button>
+    <!-- 🧩 Lista dinâmica -->
+    <div id="lista-doacoes"></div>
+  </section>
+</section>
+‎paginas/inicio.html‎
++30
+Lines changed: 30 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,30 @@
+<section>
+  <h2>Seja parte da mudança</h2>
+  <img src="../imagens-da-ong/imagem35.jpg" alt="Ações sociais da ONG Caminho de Volta" width="900">
+  <p>
+    A <strong>ONG Caminho de Volta</strong> acredita que toda pessoa merece dignidade e uma nova chance.
+    Desde 2020, promovemos ações sociais voltadas à reinserção de pessoas em situação de rua na sociedade.
+  </p>
+  <p>
+    Conheça nossas iniciativas, torne-se voluntário ou contribua com doações.  
+    Juntos, podemos transformar vidas e reacender a esperança de um futuro melhor.
+  </p>
+</section>
+<section>
+  <h2>Redes Sociais</h2>
+  <p>Nos acompanhe em nossas redes!</p>
+  <ul>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">YouTube</a></li>
+  </ul>
+</section>
+<section>
+  <h2>Contato</h2>
+  <address>
+    <p>📍 Rua das Flores, 200 - Centro, Belo Horizonte - MG</p>
+    <p>📞 (31) 9549-2448 | ✉️ contato@caminhodevolta.org.br</p>
+  </address>
+</section>
+‎paginas/projetos.html‎
++63
+Lines changed: 63 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,63 @@
+<section class="container">
+  <h2>Projetos Ativos</h2>
+  <p>
+    Acompanhe os principais projetos da ONG Caminho de Volta — iniciativas voltadas à alimentação, capacitação profissional e saúde de pessoas em situação de rua.
+  </p>
+  <!-- 🍲 Projeto Alimentação -->
+  <article>
+    <h3>🍲 Projeto Alimentação</h3>
+    <div class="galeria">
+      <img src="imagens-da-ong/imagem9.jpg" alt="Voluntários distribuindo marmitas para pessoas em situação de rua">
+      <img src="imagens-da-ong/imagem17.jpg" alt="Entrega de alimentos e bebidas a famílias vulneráveis">
+      <img src="imagens-da-ong/imagem26.png" alt="Distribuição de refeições em abrigo comunitário">
+    </div>
+    <p>
+      O <strong>Projeto Alimentação</strong> distribui diariamente marmitas, lanches e bebidas para pessoas em situação de vulnerabilidade.
+      Além da alimentação, buscamos oferecer acolhimento e escuta ativa, fortalecendo o vínculo humano.
+    </p>
+    <ul>
+      <li><strong>Público atendido:</strong> Pessoas em situação de rua</li>
+      <li><strong>Meta mensal:</strong> 2.000 refeições distribuídas</li>
+      <li><strong>Parceiros:</strong> Padarias locais e voluntários da comunidade</li>
+    </ul>
+  </article>
+  <!-- 💼 Projeto Capacitação Profissional -->
+  <article>
+    <h3>💼 Capacitação Profissional</h3>
+    <div class="galeria">
+      <img src="imagens-da-ong/imagem18.jpg" alt="Aula prática de informática com participantes atentos">
+      <img src="imagens-da-ong/imagem24.jpg" alt="Participantes do curso aprendendo jardinagem urbana">
+      <img src="imagens-da-ong/imagem25.jpg" alt="Instrutor ministrando oficina de capacitação profissional">
+    </div>
+    <p>
+      O projeto <strong>Capacitação Profissional</strong> prepara pessoas para o mercado de trabalho,
+      oferecendo cursos gratuitos em áreas como serviços gerais, jardinagem e informática básica.
+    </p>
+    <ul>
+      <li><strong>Carga horária:</strong> 40 horas</li>
+      <li><strong>Metodologia:</strong> Aulas teóricas e práticas</li>
+      <li><strong>Parceiros:</strong> Senac, empresas locais e educadores voluntários</li>
+    </ul>
+  </article>
+  <!-- 🧼 Projeto Ações de Saúde e Higiene -->
+  <article>
+    <h3>🧼 Ações de Saúde e Higiene</h3>
+    <div class="galeria">
+      <img src="imagens-da-ong/imagem21.jpg" alt="Corte de cabelo gratuito durante mutirão de cuidados pessoais">
+      <img src="imagens-da-ong/imagem22.jpg" alt="Distribuição de kits de higiene pessoal para moradores de rua">
+      <img src="imagens-da-ong/imagem23.jpeg" alt="Atendimento médico voluntário realizado por profissionais da saúde">
+    </div>
+    <p>
+      As <strong>Ações de Saúde e Higiene</strong> promovem mutirões de cuidados com a saúde e a autoestima,
+      em parceria com instituições públicas e privadas.
+    </p>
+    <ul>
+      <li><strong>Serviços oferecidos:</strong> Corte de cabelo, atendimento médico, vacinação e kits de higiene</li>
+      <li><strong>Periodicidade:</strong> Quinzenal</li>
+      <li><strong>Parceiros:</strong> Secretarias municipais e clínicas voluntárias</li>
+    </ul>
+  </article>
+</section>
+‎paginas/sobre.html‎
++61
+Lines changed: 61 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,61 @@
+<section class="container">
+  <!-- 🧩 Quem Somos -->
+  <article>
+    <h2>Quem Somos</h2>
+    <p>
+      A <strong>ONG Caminho de Volta</strong> surgiu em 2020 a partir da necessidade de oferecer amparo e dignidade às pessoas em situação de rua. 
+      Diante da realidade de vulnerabilidade que enfrentam, um grupo de voluntários se uniu com o propósito de fornecer alimentação, roupas e apoio humano.
+    </p>
+    <p>
+      Com o tempo, o projeto cresceu significativamente, abrindo novas oportunidades, atraindo mais voluntários e recebendo um número cada vez maior de doações.
+    </p>
+    <p>
+      Nosso compromisso vai além da ajuda imediata: buscamos reintegrar essas pessoas à sociedade, promovendo o reencontro com suas famílias 
+      ou oferecendo condições para um novo começo — com moradia, identidade e esperança.
+    </p>
+    <p>
+      Convidamos você a fazer parte desse propósito transformador. Junte-se ao Caminho de Volta, seja como voluntário ou contribuindo com doações. 
+      Cada gesto faz a diferença na vida de quem precisa recomeçar.
+    </p>
+    <!-- 🖼️ Galeria institucional -->
+    <div class="galeria">
+      <img src="imagens-da-ong/imagem40.jpg" alt="Equipe de voluntários da ONG Caminho de Volta reunida em ação social">
+      <img src="imagens-da-ong/imagem41.jpg" alt="Distribuição de alimentos e roupas em comunidade carente">
+      <img src="imagens-da-ong/imagem42.jpg" alt="Entrega de kits de higiene e acolhimento em abrigo parceiro">
+    </div>
+  </article>
+  <!-- 🎯 Missão -->
+  <section aria-labelledby="missao">
+    <h3 id="missao">🎯 Missão</h3>
+    <img src="imagens-da-ong/imagem39.jpg" alt="Voluntários oferecendo apoio e acolhimento a pessoas em situação de rua">
+    <p>
+      Promover dignidade, reinserção e suporte para pessoas em situação de rua por meio de programas integrados e ações transformadoras.
+    </p>
+  </section>
+  <!-- 👁️ Visão -->
+  <section aria-labelledby="visao">
+    <h3 id="visao">👁️ Visão</h3>
+    <img src="imagens-da-ong/imagem36.jpg" alt="Ações da ONG promovendo inclusão e esperança de um novo começo">
+    <p>
+      Ser referência em atendimento humanitário e inclusão social, inspirando outras iniciativas de solidariedade e reinserção social.
+    </p>
+  </section>
+  <!-- 💙 Valores -->
+  <section aria-labelledby="valores">
+    <h3 id="valores">💙 Valores</h3>
+    <ul class="valores-lista">
+      <li>Respeito</li>
+      <li>Transparência</li>
+      <li>Empatia</li>
+      <li>Colaboração</li>
+      <li>Esperança</li>
+    </ul>
+  </section>
+</section>
+‎paginas/voluntariado.html‎
++69
+Lines changed: 69 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,69 @@
+<section class="container">
+  <h1>Voluntariado</h1>
+  <p>
+    Faça parte de quem transforma vidas. Inscreva-se como voluntário e ajude a levar dignidade e esperança para pessoas em situação de rua.
+  </p>
+  <!-- 🖼️ Galeria de Voluntariado -->
+  <div class="galeria">
+    <img src="imagens-da-ong/imagem32.jpg" alt="Voluntários organizando doações e separando roupas">
+    <img src="imagens-da-ong/imagem33.jpg" alt="Equipe de voluntários da ONG Caminho de Volta distribuindo alimentos">
+    <img src="imagens-da-ong/imagem43.jpg" alt="Atividade comunitária da ONG Caminho de Volta em um abrigo">
+  </div>
+  <!-- 🧡 Formulário -->
+  <section>
+    <h2>Junte-se a Nós</h2>
+    <p>
+      Preencha o formulário abaixo e faça parte da nossa equipe de voluntários.
+      Oferecemos certificado de participação e contabilizamos horas de atividade social.
+    </p>
+    <article>
+      <h3>Inscreva-se como Voluntário</h3>
+      <form id="formVoluntario" autocomplete="on">
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <label for="nomeVoluntario">Nome completo</label>
+          <input id="nomeVoluntario" name="nome" type="text" placeholder="Seu nome completo" required>
+          <label for="emailVoluntario">E-mail</label>
+          <input id="emailVoluntario" name="email" type="email" placeholder="seunome@exemplo.com" required>
+          <label for="telefoneVoluntario">Telefone</label>
+          <input id="telefoneVoluntario" name="telefone" type="tel" placeholder="(11) 99999-9999" required>
+        </fieldset>
+        <fieldset>
+          <legend>Disponibilidade</legend>
+          <label for="disponibilidade">Escolha seu turno preferido</label>
+          <select id="disponibilidade" name="disponibilidade" required>
+            <option value="">Selecione</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+          </select>
+        </fieldset>
+        <button type="submit" class="btn-doar">Enviar Inscrição</button>
+      </form>
+      <p class="hint">💡 Suas informações são confidenciais e usadas apenas para contato interno da ONG.</p>
+    </article>
+  </section>
+  <!-- 📋 Histórico de Voluntários -->
+  <section>
+    <h2>Voluntários Cadastrados</h2>
+    <!-- 🔥 Botão para limpar histórico -->
+    <button id="btnLimparVoluntarios" class="btn-limpar">🗑️ Limpar histórico de voluntários</button>
+    <!-- 🧩 Lista dinâmica -->
+    <div id="lista-voluntarios"></div>
+  </section>
+</section>
