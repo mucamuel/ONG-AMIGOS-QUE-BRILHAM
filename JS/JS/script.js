@@ -1,5 +1,5 @@
 // =========================
-// 🌍 ONG CAMINHO DE VOLTA — SCRIPT PRINCIPAL (Etapa 3 Final + Limpeza de Histórico)
+// 🌍 ONG AMIGOS QUE BRILHAM — SCRIPT PRINCIPAL (Etapa 3 Final + Limpeza de Histórico)
 // =========================
 
 document.addEventListener("DOMContentLoaded", () => {
