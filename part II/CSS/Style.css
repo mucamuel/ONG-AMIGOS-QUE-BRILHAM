@@ -1,1 +1,463 @@
+/* =======================================================
+   🌍 ONG AMIGOS QUE BRILHAM — STYLE.CSS RESPONSIVO (ETAPA 2)
+   ======================================================= */
 
+/* 🎨 SISTEMA DE DESIGN — VARIÁVEIS GLOBAIS */
+:root {
+  /* Paleta de cores (mínimo 8) */
+  --primary-color: #243342;      /* Azul Escuro */
+  --primary-medium: #3a4a5c;     /* Azul Médio */
+  --secondary-color: #d16100;    /* Laranja Principal */
+  --accent-color: #ffb84d;       /* Laranja Claro */
+  --accent-soft: #e68a2e;        /* Laranja Suave */
+  --neutral-light: #f7f7f7;      /* Neutro Claro */
+  --neutral-medium: #cccccc;     /* Neutro Médio */
+  --neutral-dark: #333333;       /* Neutro Escuro */
+
+  /* Tipografia (mínimo 5 tamanhos) */
+  --font-xs: 0.8rem;
+  --font-sm: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+
+  /* Sistema de espaçamento modular (8px → 64px) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  --font-primary: "Roboto", sans-serif;
+}
+
+/* 🌐 REGRAS GERAIS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--neutral-dark);
+  background-color: var(--neutral-light);
+  line-height: 1.6;
+}
+
+/* =======================================================
+   🧭 CABEÇALHO
+   ======================================================= */
+header {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--space-4) var(--space-2);
+}
+
+header h1 {
+  font-size: var(--font-xl);
+  margin-bottom: var(--space-1);
+}
+
+header p {
+  font-size: var(--font-md);
+  color: var(--accent-color);
+}
+
+header figure {
+  margin-top: var(--space-3);
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+header figcaption {
+  font-size: var(--font-sm);
+  color: var(--accent-color);
+  margin-top: var(--space-1);
+}
+
+/* =======================================================
+   🍔 MENU DE NAVEGAÇÃO
+   ======================================================= */
+nav {
+  background-color: var(--secondary-color);
+  padding: var(--space-1) var(--space-2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: var(--space-2);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* =======================================================
+   📱 MENU MOBILE (HAMBÚRGUER)
+   ======================================================= */
+.menu-hamburguer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    width: 28px;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 10px auto;
+    z-index: 20;
+  }
+
+  .menu-hamburguer div {
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animação para o "X" */
+  nav.ativo .menu-hamburguer div:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  nav.ativo .menu-hamburguer div:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.ativo .menu-hamburguer div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Menu oculto */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-top: var(--space-1);
+    padding: var(--space-2) 0;
+    width: 90%;
+    max-width: 280px;
+    margin-inline: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  /* Menu visível */
+  nav.ativo ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: var(--space-1) 0;
+  }
+
+  nav ul a {
+    font-size: var(--font-sm);
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* =======================================================
+   📄 CONTEÚDO PRINCIPAL
+   ======================================================= */
+
+/* 🖼️ IMAGENS DO VOLUNTARIADO */
+section.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+}
+
+/* 📸 IMAGENS DAS SEÇÕES (PROJETOS, DOAÇÕES, ETC.) */
+section.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-3);
+}
+
+main {
+  padding: var(--space-4) var(--space-2);
+  max-width: 1200px;
+  margin: auto;
+}
+
+main section {
+  margin-bottom: var(--space-4);
+  background: white;
+  padding: var(--space-3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎨 Ajustes de layout para os artigos e imagens dos projetos */
+article {
+  margin-bottom: var(--space-4);
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+}
+
+article ul {
+  margin-top: var(--space-2);
+  padding-left: var(--space-3);
+  list-style: disc;
+}
+
+/* Opcional: deixar as imagens lado a lado em telas grandes */
+@media (min-width: 992px) {
+  article img {
+    width: 32%;
+    margin-right: 1%;
+  }
+
+  article img:last-child {
+    margin-right: 0;
+  }
+}
+
+main h2 {
+  color: var(--primary-color);
+  margin-bottom: var(--space-2);
+}
+
+main p {
+  margin-bottom: var(--space-2);
+}
+
+main img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+}
+
+/* Redes Sociais */
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul li {
+  margin: 0.5rem 0;
+}
+
+main ul a {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+main ul a:hover {
+  color: var(--accent-color);
+}
+
+/* =======================================================
+   🧾 FORMULÁRIOS GERAIS (Doações e Contato)
+   ======================================================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: white;
+  padding: var(--space-3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 1px solid var(--neutral-medium);
+  padding: var(--space-2);
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-2);
+  font-size: var(--font-sm);
+}
+
+input,
+select,
+textarea,
+button {
+  padding: var(--space-1);
+  border-radius: 5px;
+  border: 1px solid var(--neutral-medium);
+  font-size: var(--font-sm);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--accent-soft);
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: var(--neutral-dark);
+  margin-top: var(--space-2);
+}
+
+/* =======================================================
+   🙌 FORMULÁRIO DE VOLUNTARIADO
+   ======================================================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: white;
+  padding: var(--space-3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  margin-top: var(--space-1);
+  font-size: var(--font-sm);
+}
+
+input,
+select,
+button {
+  padding: var(--space-1);
+  border: 1px solid var(--neutral-medium);
+  border-radius: 6px;
+  font-size: var(--font-sm);
+}
+
+button {
+  background: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: var(--space-2);
+}
+
+button:hover {
+  background: var(--accent-soft);
+}
+
+/* =======================================================
+   🧩 GRID E RESPONSIVIDADE (12 colunas)
+   ======================================================= */
+
+/* Desktop padrão */
+@media (min-width: 1200px) {
+  .grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-2);
+  }
+}
+
+/* Tablet (≤992px) */
+@media (max-width: 992px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+}
+
+/* Celular médio (≤768px) */
+@media (max-width: 768px) {
+  main {
+    display: block;
+  }
+
+  header h1 {
+    font-size: var(--font-lg);
+  }
+
+  main img {
+    border-radius: 6px;
+  }
+
+  form {
+    padding: var(--space-2);
+  }
+
+  fieldset {
+    padding: var(--space-1);
+  }
+
+  label {
+    font-size: var(--font-xs);
+  }
+
+  input,
+  select,
+  button {
+    font-size: var(--font-xs);
+  }
+}
+
+/* Celular pequeno (≤480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: var(--font-md);
+  }
+
+  header p {
+    font-size: var(--font-sm);
+  }
+
+  footer {
+    font-size: var(--font-xs);
+  }
+}
