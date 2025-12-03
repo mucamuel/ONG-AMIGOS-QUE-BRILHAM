@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Contato - Caminho de Volta</title>
+</head>
 
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Contato — Caminho de Volta</h1>
+    <p>Entre em contato conosco e faça parte dessa transformação!</p>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav id="menu">
+    <!-- Botão hambúrguer -->
+    <div class="menu-hamburguer" id="btn-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="voluntariado.html">Voluntariado</a></li>
+      <li><a href="doacoes.html">Doações</a></li>
+      <li><a href="contato.html" class="ativo">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main  class="container">
+    
+    <!-- Informações de Contato -->
+    <section>
+      <h2>Entre em Contato</h2>
+      <address>
+        <p>Rua das Flores, 200 - Centro, Belo Horizonte - MG</p>
+        <p>Telefone: (31) 9549-2448 | Email: contato@caminhodevolta.org.br</p>
+      </address>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section>
+      <h2>Envie uma Mensagem</h2>
+      <form novalidate>
+        <fieldset>
+          <legend>Dados do Contato</legend>
+          <label for="nomeContato">Nome:
+            <input type="text" id="nomeContato" required minlength="2">
+          </label>
+          <label for="emailContato">Email:
+            <input type="email" id="emailContato" required multiple>
+          </label>
+          <label for="telefoneContato">Telefone:
+            <input type="tel" id="telefoneContato" pattern="\([0-9]{2}\)\s?[0-9]{4,5}-[0-9]{4}" title="Formato: (11) 99999-9999" placeholder="(11) 99999-9999">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço (Opcional)</legend>
+          <label for="cepContato">CEP:
+            <input type="text" id="cepContato" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000">
+          </label>
+          <label for="enderecoContato">Endereço:
+            <input type="text" id="enderecoContato">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mensagem</legend>
+          <label for="assunto">Assunto:
+            <select id="assunto" required>
+              <option value="">Selecione</option>
+              <option value="doacao">Doação</option>
+              <option value="voluntariado">Voluntariado</option>
+              <option value="parceria">Parceria</option>
+              <option value="outro">Outro</option>
+            </select>
+          </label>
+
+          <label for="mensagemContato">Mensagem:
+            <textarea id="mensagemContato" rows="5" required maxlength="1000" placeholder="Descreva sua dúvida ou sugestão..."></textarea>
+          </label>
+
+          <label for="anexos">Anexos (opcional):
+            <input type="file" id="anexos" accept=".pdf,.jpg,.doc" multiple>
+          </label>
+        </fieldset>
+
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Caminho de Volta — Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../script.js"></script>
+  <script src="../js/mascaras.js" defer></script>
+</body>
+</html>
