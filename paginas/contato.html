@@ -1,1 +1,66 @@
+<section class="container">
+  <h1>Contato</h1>
+  <p>Fale conosco e saiba como apoiar o Caminho de Volta.</p>
 
+  <!-- 🏠 Informações de contato -->
+  <section>
+    <h2>Entre em Contato</h2>
+    <address>
+      <p>📍 Rua das Flores, 200 - Centro, Belo Horizonte - MG</p>
+      <p>📞 (31) 9549-2448 | ✉️ contato@caminhodevolta.org.br</p>
+    </address>
+  </section>
+
+  <!-- 💬 Formulário de mensagem -->
+  <section>
+    <h2>Envie uma Mensagem</h2>
+
+    <form id="form-contato" autocomplete="on" novalidate>
+      <!-- DADOS PESSOAIS -->
+      <fieldset>
+        <legend>Dados do Contato</legend>
+
+        <label for="nomeContato">Nome completo</label>
+        <input type="text" id="nomeContato" name="nome" required minlength="2" placeholder="Seu nome completo">
+
+        <label for="emailContato">E-mail</label>
+        <input type="email" id="emailContato" name="email" required placeholder="seunome@exemplo.com">
+
+        <label for="telefoneContato">Telefone</label>
+        <input type="tel" id="telefoneContato" name="telefone" placeholder="(11) 99999-9999">
+      </fieldset>
+
+      <!-- MENSAGEM -->
+      <fieldset>
+        <legend>Mensagem</legend>
+
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto" required>
+          <option value="">Selecione</option>
+          <option value="doacao">Doação</option>
+          <option value="voluntariado">Voluntariado</option>
+          <option value="parceria">Parceria</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <label for="mensagemContato">Mensagem</label>
+        <textarea id="mensagemContato" name="mensagem" rows="5" required maxlength="1000" placeholder="Escreva sua mensagem..."></textarea>
+      </fieldset>
+
+      <button type="submit" class="btn-doar">Enviar Mensagem</button>
+    </form>
+
+    <p class="hint">💡 Sua mensagem será armazenada localmente e usada apenas para simulação de envio.</p>
+  </section>
+
+  <!-- 📋 Histórico de mensagens -->
+  <section>
+    <h2>Mensagens Recebidas</h2>
+
+    <!-- 🔥 Botão para limpar histórico -->
+    <button id="btnLimparContatos" class="btn-limpar">🗑️ Limpar histórico de mensagens</button>
+
+    <!-- 🧩 Lista dinâmica -->
+    <div id="lista-contatos"></div>
+  </section>
+</section>
