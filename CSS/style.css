@@ -1,1 +1,567 @@
+/* =======================================================
+   🌍 ONG AMIGOS QUE BRILHAM — STYLE.CSS MODERNO E RESPONSIVO
+   ======================================================= */
 
+/* 🎨 Design System */
+:root {
+  /* Paleta */
+  --primary-color: #243342;
+  --primary-gradient: linear-gradient(135deg, #243342, #3a4a5c);
+  --secondary-color: #d16100;
+  --accent-color: #ffb84d;
+  --accent-soft: #e68a2e;
+  --neutral-light: #f7f7f7;
+  --neutral-medium: #cccccc;
+  --neutral-dark: #333333;
+
+  /* Tipografia */
+  --font-primary: "Roboto", sans-serif;
+  --font-xs: 0.8rem;
+  --font-sm: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2.2rem;
+
+  /* Espaçamento */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+}
+
+/* 🌐 Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--neutral-dark);
+  background-color: var(--neutral-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* =======================================================
+   🧭 CABEÇALHO
+   ======================================================= */
+header {
+  text-align: center;
+  background: var(--primary-gradient);
+  color: white;
+  padding: var(--space-4) var(--space-2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: var(--font-xl);
+  margin-bottom: var(--space-1);
+  letter-spacing: 0.5px;
+}
+
+header p {
+  font-size: var(--font-md);
+  color: var(--accent-color);
+}
+
+header figure {
+  margin-top: var(--space-3);
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+header img:hover {
+  transform: scale(1.02);
+}
+
+header figcaption {
+  font-size: var(--font-sm);
+  color: var(--accent-color);
+  margin-top: var(--space-1);
+}
+
+/* =======================================================
+   🍔 MENU DE NAVEGAÇÃO
+   ======================================================= */
+nav {
+  background-color: var(--secondary-color);
+  padding: var(--space-2);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: var(--space-2);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--accent-color);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.ativo::after {
+  width: 100%;
+}
+
+/* =======================================================
+   📄 CONTEÚDO PRINCIPAL
+   ======================================================= */
+main {
+  padding: var(--space-5) var(--space-2);
+  max-width: 1200px;
+  margin: auto;
+}
+
+main section {
+  margin-bottom: var(--space-4);
+  background: white;
+  padding: var(--space-3);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+main h2 {
+  color: var(--primary-color);
+  font-size: var(--font-lg);
+  margin-bottom: var(--space-2);
+}
+
+main p {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-sm);
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: var(--space-2);
+  object-fit: cover;
+}
+
+/* =======================================================
+   🧩 TEMPLATES DE HISTÓRICOS (Cards)
+   ======================================================= */
+.card-template {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: var(--space-3);
+  margin: var(--space-2) 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card-template:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Doações 💰 */
+.card-template.doacao {
+  border-left: 5px solid var(--secondary-color);
+}
+
+.card-template.doacao::before {
+  content: "💰";
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.6rem;
+}
+
+/* Voluntários 🤝 */
+.card-template.voluntario {
+  border-left: 5px solid #1b9c85;
+}
+
+.card-template.voluntario::before {
+  content: "🤝";
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.6rem;
+}
+
+/* Contatos ✉️ */
+.card-template.contato {
+  border-left: 5px solid #0077b6;
+}
+
+.card-template.contato::before {
+  content: "✉️";
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.6rem;
+}
+
+.card-title {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: var(--space-1);
+}
+
+.card-info {
+  color: var(--neutral-dark);
+  font-size: var(--font-sm);
+  line-height: 1.5;
+}
+
+.card-date {
+  font-size: var(--font-xs);
+  color: var(--neutral-medium);
+  margin-top: var(--space-1);
+  text-align: right;
+  font-style: italic;
+}
+
+/* =======================================================
+   💰 FORMULÁRIOS GERAIS
+   ======================================================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+fieldset {
+  border: 1px solid var(--neutral-medium);
+  border-radius: 14px;
+  padding: var(--space-3);
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0 var(--space-1);
+}
+
+label {
+  display: block;
+  margin-top: var(--space-2);
+  font-weight: 600;
+  color: var(--primary-medium);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: var(--space-2);
+  margin-top: var(--space-1);
+  border: 1px solid var(--neutral-medium);
+  border-radius: 10px;
+  font-size: var(--font-sm);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 6px var(--accent-color);
+}
+
+button[type="submit"],
+.btn-doar {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover,
+.btn-doar:hover {
+  background-color: var(--accent-soft);
+  transform: scale(1.03);
+}
+
+/* =======================================================
+   🗑️ BOTÃO DE LIMPEZA DE HISTÓRICO
+   ======================================================= */
+.btn-limpar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #d9534f;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: var(--space-2) var(--space-3);
+  margin-top: var(--space-2);
+  cursor: pointer;
+  font-size: var(--font-sm);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(217, 83, 79, 0.3);
+}
+
+.btn-limpar::before {
+  content: "🗑️";
+  font-size: 1rem;
+}
+
+.btn-limpar:hover {
+  background: #c9302c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 83, 79, 0.4);
+}
+
+.btn-limpar:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-limpar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #aaa;
+}
+
+/* =======================================================
+   🖼️ GALERIA DE IMAGENS
+   ======================================================= */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-2);
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+
+
+/* =======================================================
+   ⚙️ RODAPÉ
+   ======================================================= */
+footer {
+  background: var(--primary-gradient);
+  color: white;
+  text-align: center;
+  padding: var(--space-3);
+  font-size: var(--font-sm);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+}
+/* =======================================================
+   🌐 LINKS DE REDES SOCIAIS (NOVO DESIGN)
+   ======================================================= */
+ul.redes-sociais {
+  list-style: none !important;
+  padding: 0;
+  margin-top: var(--space-2);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+ul.redes-sociais li {
+  margin: 0;
+}
+
+ul.redes-sociais a {
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: var(--font-sm);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 12px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+ul.redes-sociais a[href*="facebook"] {
+  background-color: #1877f2;
+}
+ul.redes-sociais a[href*="instagram"] {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+ul.redes-sociais a[href*="youtube"] {
+  background-color: #ff0000;
+}
+
+ul.redes-sociais a[href*="facebook"]::before { content: "📘"; }
+ul.redes-sociais a[href*="instagram"]::before { content: "📸"; }
+ul.redes-sociais a[href*="youtube"]::before { content: "▶️"; }
+
+ul.redes-sociais a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+/* =======================================================
+   📱 RESPONSIVIDADE
+   ======================================================= */
+@media (max-width: 768px) {
+  ul.redes-sociais {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.redes-sociais a {
+    width: 80%;
+    justify-content: center;
+  }
+}
+
+/* ================================
+   ♿ Acessibilidade + Tema
+   ================================ */
+
+/* Foco visível */
+:focus-visible {
+  outline: 3px solid #ffb84d;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Link "pular para o conteúdo" */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -40px;
+  background: #243342;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  z-index: 1000;
+  transition: top .2s ease;
+  text-decoration: none;
+}
+.skip-link:focus { top: 8px; }
+
+/* Botões acessibilidade */
+.btn-acao {
+  background: #ffffff22;
+  color: #fff;
+  border: 1px solid #ffffff55;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.btn-acao:hover { transform: translateY(-1px); background: #ffffff33; }
+.btn-acao[aria-pressed="true"] { border-color: #fff; background: #ffffff3b; }
+
+nav ul .separador {
+  width: 1px; height: 22px;
+  background: #ffffff44;
+  margin: 0 8px;
+}
+
+/* 🌙 Tema escuro */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --neutral-light: #0f1821;
+    --neutral-dark: #eaeaea;
+  }
+}
+
+:root[data-theme="dark"] {
+  --neutral-light: #0f1821;
+  --neutral-medium: #4d5b69;
+  --neutral-dark: #eaeaea;
+
+  --primary-color: #dfe8f0;
+  --primary-gradient: linear-gradient(135deg,#0f1821,#1b2a38);
+  --secondary-color: #ff8a1a;
+  --accent-color: #ffd089;
+  --accent-soft: #ffad52;
+
+  background-color: var(--neutral-light);
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] body {
+  background: var(--neutral-light);
+  color: var(--neutral-dark);
+}
+:root[data-theme="dark"] main section,
+:root[data-theme="dark"] fieldset,
+:root[data-theme="dark"] .card-template {
+  background: #13212d;
+  box-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+:root[data-theme="dark"] nav { box-shadow: 0 3px 6px rgba(0,0,0,.4); }
+:root[data-theme="dark"] .galeria img:hover { box-shadow: 0 4px 14px rgba(0,0,0,.45); }
+:root[data-theme="dark"] input, 
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea {
+  background: #0f1821;
+  color: var(--neutral-dark);
+  border-color: #2e3a45;
+}
+
+/* 🌓 Alto contraste */
+:root[data-contrast="high"] {
+  --secondary-color: #b64800;
+  --accent-color: #ffd27a;
+  --accent-soft: #ff9800;
+}
+:root[data-contrast="high"] a { text-decoration: underline; }
+:root[data-contrast="high"] .btn-doar,
+:root[data-contrast="high"] .btn-acao { font-weight: 800; }
+:root[data-contrast="high"] :focus-visible { outline: 3px solid #ffd27a; }
+
+/* Ajuste para lista de rede*
