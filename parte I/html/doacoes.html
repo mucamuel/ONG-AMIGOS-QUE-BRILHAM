@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doações - Caminho de Volta</title>
+</head>
 
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Doações</h1>
+    <p>ONG dedicada a apoiar pessoas em situação de rua.</p>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="voluntariado.html">Voluntariado</a></li>
+      <li><a href="doacoes.html">Doações</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Imagens ilustrativas -->
+  <section>
+    <img src="../imagens-da-ong/imagem30.jpg" alt="Pessoas doando mantimentos para a ONG Caminho de Volta.">
+    <img src="../imagens-da-ong/imagem34.jpg" alt="Doadores recebendo mantimentos distribuídos pela ONG.">
+    <img src="../imagens-da-ong/imagem38.jpg" alt="Mantimentos arrecadados prontos para doação.">
+  </section>
+     
+  <!-- Conteúdo principal -->
+  <main>
+
+    <section>
+      <h2>Como Doar</h2>
+      <p>Sua contribuição faz a diferença! Doações a partir de R$ 10,00. Aceitamos PIX, cartão e boleto.</p>
+    </section>
+
+    <section>
+      <h2>Faça Sua Doação Agora</h2>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Dados do Doador</legend>
+
+          <label>CPF:
+            <input type="text" placeholder="000.000.000-00" required>
+          </label>
+
+          <label>Nome Completo:
+            <input type="text" required>
+          </label>
+
+          <label>Email:
+            <input type="email" required>
+          </label>
+
+          <label>Telefone:
+            <input type="tel" placeholder="(11) 99999-9999" required>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço (Opcional)</legend>
+
+          <label>CEP:
+            <input type="text" placeholder="00000-000">
+          </label>
+
+          <label>Endereço:
+            <input type="text">
+          </label>
+
+          <label>Bairro:
+            <input type="text">
+          </label>
+
+          <label>Cidade:
+            <input type="text">
+          </label>
+
+          <label>UF:
+            <select>
+              <option value="">Selecione</option>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="MG">MG</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalhes da Doação</legend>
+
+          <label>Valor (R$):
+            <input type="number" min="10" max="10000" step="0.01" required>
+          </label>
+
+          <label>Método de Pagamento:
+            <select required>
+              <option value="">Selecione</option>
+              <option value="pix">PIX</option>
+              <option value="cartao">Cartão</option>
+              <option value="boleto">Boleto</option>
+            </select>
+          </label>
+
+          <p>Frequência:</p>
+          <label><input type="radio" name="frequencia" value="unica" required> Única</label>
+          <label><input type="radio" name="frequencia" value="mensal"> Mensal</label>
+        </fieldset>
+
+        <button type="submit">Confirmar Doação</button>
+      </form>
+
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Caminho de Volta — Doações seguras e transparentes.</p>
+  </footer>
+
+</body>
+</html>
