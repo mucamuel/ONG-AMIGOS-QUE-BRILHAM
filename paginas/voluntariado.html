@@ -1,1 +1,67 @@
+<section class="container">
+  <h1>Voluntariado</h1>
+  <p>
+    Faça parte de quem transforma vidas. Inscreva-se como voluntário e ajude a levar dignidade e esperança para pessoas em situação de rua.
+  </p>
 
+  <!-- 🖼️ Galeria de Voluntariado -->
+  <div class="galeria">
+    <img src="imagens-da-ong/imagem32.jpg" alt="Voluntários organizando doações e separando roupas">
+    <img src="imagens-da-ong/imagem33.jpg" alt="Equipe de voluntários da ONG Caminho de Volta distribuindo alimentos">
+    <img src="imagens-da-ong/imagem43.jpg" alt="Atividade comunitária da ONG Caminho de Volta em um abrigo">
+  </div>
+
+  <!-- 🧡 Formulário -->
+  <section>
+    <h2>Junte-se a Nós</h2>
+    <p>
+      Preencha o formulário abaixo e faça parte da nossa equipe de voluntários.
+      Oferecemos certificado de participação e contabilizamos horas de atividade social.
+    </p>
+
+    <article>
+      <h3>Inscreva-se como Voluntário</h3>
+
+      <form id="formVoluntario" autocomplete="on">
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+
+          <label for="nomeVoluntario">Nome completo</label>
+          <input id="nomeVoluntario" name="nome" type="text" placeholder="Seu nome completo" required>
+
+          <label for="emailVoluntario">E-mail</label>
+          <input id="emailVoluntario" name="email" type="email" placeholder="seunome@exemplo.com" required>
+
+          <label for="telefoneVoluntario">Telefone</label>
+          <input id="telefoneVoluntario" name="telefone" type="tel" placeholder="(11) 99999-9999" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Disponibilidade</legend>
+          <label for="disponibilidade">Escolha seu turno preferido</label>
+          <select id="disponibilidade" name="disponibilidade" required>
+            <option value="">Selecione</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+          </select>
+        </fieldset>
+
+        <button type="submit" class="btn-doar">Enviar Inscrição</button>
+      </form>
+
+      <p class="hint">💡 Suas informações são confidenciais e usadas apenas para contato interno da ONG.</p>
+    </article>
+  </section>
+
+  <!-- 📋 Histórico de Voluntários -->
+  <section>
+    <h2>Voluntários Cadastrados</h2>
+
+    <!-- 🔥 Botão para limpar histórico -->
+    <button id="btnLimparVoluntarios" class="btn-limpar">🗑️ Limpar histórico de voluntários</button>
+
+    <!-- 🧩 Lista dinâmica -->
+    <div id="lista-voluntarios"></div>
+  </section>
+</section>
