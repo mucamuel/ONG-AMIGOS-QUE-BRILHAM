@@ -1,1 +1,115 @@
+<section class="container">
+  <h1>Doações</h1>
+  <p>
+    A ONG Caminho de Volta dedica-se a apoiar pessoas em situação de rua, promovendo dignidade e esperança por meio de ações sociais.
+  </p>
 
+  <!-- 🖼️ Galeria ilustrativa -->
+  <div class="galeria">
+    <img src="imagens-da-ong/imagem30.jpg" alt="Pessoa realizando doação de alimentos para a ONG Caminho de Volta">
+    <img src="imagens-da-ong/imagem34.jpg" alt="Voluntários organizando mantimentos doados">
+    <img src="imagens-da-ong/imagem38.jpg" alt="Cestas básicas e produtos de higiene prontos para entrega">
+  </div>
+
+  <!-- 💰 Como Doar -->
+  <section>
+    <h2>Como Doar</h2>
+    <p>
+      Sua contribuição faz a diferença! As doações ajudam a manter nossos projetos sociais e podem ser feitas a partir de <strong>R$10,00</strong>.
+      Aceitamos pagamentos via <strong>PIX</strong>, <strong>cartão</strong> e <strong>boleto</strong>.
+    </p>
+  </section>
+
+  <!-- 📝 Formulário de Doação -->
+  <section aria-labelledby="form-doacao">
+    <h2 id="form-doacao">Faça Sua Doação Agora</h2>
+
+    <form id="formDoacao" autocomplete="on">
+      <!-- DADOS DO DOADOR -->
+      <fieldset>
+        <legend>Dados do Doador</legend>
+
+        <label for="cpfDoacao">CPF</label>
+        <input id="cpfDoacao" name="cpf" type="text" placeholder="000.000.000-00"
+          inputmode="numeric" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+          title="Formato: 000.000.000-00" required>
+
+        <label for="nomeDoacao">Nome Completo</label>
+        <input id="nomeDoacao" name="nome" type="text" minlength="3" maxlength="100" required>
+
+        <label for="emailDoacao">E-mail</label>
+        <input id="emailDoacao" name="email" type="email" placeholder="seunome@exemplo.com" required>
+
+        <label for="telefoneDoacao">Telefone</label>
+        <input id="telefoneDoacao" name="telefone" type="tel"
+          pattern="\([0-9]{2}\)\s?[0-9]{4,5}-[0-9]{4}"
+          title="Formato: (11) 99999-9999 ou (11) 9999-9999"
+          placeholder="(11) 99999-9999" required>
+      </fieldset>
+
+      <!-- ENDEREÇO -->
+      <fieldset>
+        <legend>Endereço (Opcional)</legend>
+
+        <label for="cepDoacao">CEP</label>
+        <input id="cepDoacao" name="cep" type="text" pattern="[0-9]{5}-[0-9]{3}"
+          title="Formato: 00000-000" placeholder="00000-000">
+
+        <label for="enderecoDoacao">Endereço</label>
+        <input id="enderecoDoacao" name="endereco" type="text">
+
+        <label for="bairroDoacao">Bairro</label>
+        <input id="bairroDoacao" name="bairro" type="text">
+
+        <label for="cidadeDoacao">Cidade</label>
+        <input id="cidadeDoacao" name="cidade" type="text">
+
+        <label for="ufDoacao">UF</label>
+        <select id="ufDoacao" name="uf">
+          <option value="">Selecione</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <option value="MG">MG</option>
+        </select>
+      </fieldset>
+
+      <!-- DETALHES DA DOAÇÃO -->
+      <fieldset>
+        <legend>Detalhes da Doação</legend>
+
+        <label for="valorDoacao">Valor (R$)</label>
+        <input id="valorDoacao" name="valor" type="number" min="10" max="10000" step="0.01"
+          placeholder="Ex: 50.00" required>
+
+        <label for="metodoPagamento">Método de Pagamento</label>
+        <select id="metodoPagamento" name="pagamento" required>
+          <option value="">Selecione</option>
+          <option value="pix">PIX</option>
+          <option value="cartao">Cartão</option>
+          <option value="boleto">Boleto</option>
+        </select>
+      </fieldset>
+
+      <!-- FREQUÊNCIA -->
+      <fieldset>
+        <legend>Frequência</legend>
+        <label><input type="radio" name="frequencia" value="unica" required> Única</label>
+        <label><input type="radio" name="frequencia" value="mensal"> Mensal</label>
+      </fieldset>
+
+      <button type="submit" class="btn-doar">Confirmar Doação</button>
+    </form>
+
+    <p class="hint">💡 Para produção, integre com um gateway de pagamento (ex.: PagSeguro, Stripe).</p>
+  </section>
+
+  <!-- 📊 Histórico de Doações -->
+  <section>
+    <h2>Histórico de Doações</h2>
+    <!-- 🔥 Botão de limpeza -->
+    <button id="btnLimparDoacoes" class="btn-limpar">🗑️ Limpar histórico de doações</button>
+
+    <!-- 🧩 Lista dinâmica -->
+    <div id="lista-doacoes"></div>
+  </section>
+</section>
