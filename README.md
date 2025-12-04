@@ -1,4 +1,4 @@
-# 🌍 ONG AMIGOS QUE BRILHAM
+# ONG AMIGOS QUE BRILHAM
 
 Projeto desenvolvido ao longo do curso de **Análise e Desenvolvimento de Sistemas**, com o objetivo de aplicar práticas de **Front-End, Design System, JavaScript, Acessibilidade (WCAG 2.1)** e **Versionamento com Git/GitHub**.
 
