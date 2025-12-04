@@ -113,17 +113,7 @@ Projeto-ong-caminho-de-volta/
 * Histórico completo das Etapas 1 a 4;
 * Repositório com estrutura organizada e documentada.
 
----
+-
 
-## 📜 Deploy
-
-O projeto foi publicado com **GitHub Pages**:
-🔗 [https://arthur24-star.github.io/Projeto-ong-caminho-de-volta/](https://arthur24-star.github.io/Projeto-ong-caminho-de-volta/)
-
----
-
-## 🧾 Autor
-
-**Arthur Fernando Rodrigues Fonseca**
 Estudante de Análise e Desenvolvimento de Sistemas
 📎 [GitHub](https://github.com/mucamuel) | [LinkedIn](https://www.linkedin.com/in/samuel-do-carmo-37707b324/)
