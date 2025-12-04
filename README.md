@@ -1,30 +1,129 @@
-Este projeto consiste no desenvolvimento de uma plataforma web completa para ONGs, permitindo gerenciamento de atividades, divulgação de projetos, captação de recursos e engajamento de voluntários.
-O objetivo é aplicar todos os conceitos estudados na disciplina, incluindo HTML5, CSS3, JavaScript, acessibilidade e SEO.
+# 🌍 ONG AMIGOS QUE BRILHAM
 
-Objetivo Geral:
-Desenvolver uma plataforma web completa e profissional que permita a ONGs gerenciar suas atividades, divulgar projetos, captar recursos e engajar voluntários.
+Projeto desenvolvido ao longo do curso de **Análise e Desenvolvimento de Sistemas**, com o objetivo de aplicar práticas de **Front-End, Design System, JavaScript, Acessibilidade (WCAG 2.1)** e **Versionamento com Git/GitHub**.
 
-Objetivos Específicos:
-- Aplicar fundamentos de HTML5 na criação de estruturas semânticas complexas.
-- Implementar leiautes responsivos e sistemas de design usando CSS3 avançado.
-- Desenvolver funcionalidades interativas e dinâmicas com JavaScript.
-- Integrar ferramentas de versionamento, acessibilidade e infraestrutura web.
-- Simular um ambiente de desenvolvimento profissional com metodologias ágeis.
-- Produzir documentação técnica de qualidade profissional.
+O site da ONG **AMIGOS QUE BRILHAM** tem como missão divulgar ações sociais e incentivar a participação de voluntários e doadores que apoiam pessoas em situação de vulnerabilidade.
 
-Justificativa
-Este projeto foi estruturado para desafiar os estudantes a aplicarem todo o conteúdo ministrado em um contexto realista e socialmente relevante. A escolha de uma plataforma para ONGs oferece múltiplas personas, diversas funcionalidades e requisitos técnicos variados, garantindo que todos os conceitos da disciplina sejam aplicados de forma significativa.
-Metodologia
-A plataforma foi desenvolvida utilizando HTML5 para estrutura semântica, CSS3 avançado para responsividade e design, e JavaScript para interatividade. Foram aplicadas boas práticas de acessibilidade (WCAG 2.1 AA) e otimização para SEO. O projeto inclui três páginas principais: index.html, projetos.html e cadastro.html, além de scripts para máscaras e validação.
-Prints das Telas
-Tela Inicial: Apresenta missão, visão e valores da ONG, além de informações de contato.
-Tela Projetos: Lista projetos sociais e oportunidades de voluntariado.
-Tela Cadastro: Formulário completo com validação e máscaras para CPF, telefone e CEP.
-Conclusão
-O projeto atendeu aos requisitos propostos, aplicando conceitos fundamentais de desenvolvimento web. A plataforma é responsiva, acessível e otimizada para SEO, oferecendo uma solução funcional e profissional para ONGs.
+🔗 **Acesse o site:**
+https://github.com/mucamuel
 
-Referências
-W3C. HTML5 Specification. Disponível em: https://www.w3.org/TR/html5/
-W3C. WCAG 2.1 Guidelines. Disponível em: https://www.w3.org/TR/WCAG21/
-MDN Web Docs. HTML, CSS e JavaScript. Disponível em: https://developer.mozilla.org/
+---
 
+## 🧩 Estrutura do Projeto
+
+O desenvolvimento foi dividido em quatro etapas, cada uma representando um avanço técnico e conceitual:
+
+### 🏗️ Etapa 1 — Estrutura HTML e Semântica
+
+* Criação das páginas principais (Início, Sobre, Projetos, Voluntariado, Doações e Contato);
+* Uso de **tags semânticas** (`header`, `nav`, `main`, `section`, `article`, `footer`);
+* Inclusão de textos descritivos e imagens com `alt` para acessibilidade;
+* Navegação básica entre páginas via `<a>`.
+
+---
+
+### 🎨 Etapa 2 — Design System e Responsividade
+
+* Implementação de **variáveis CSS** para cores, tipografia e espaçamentos;
+* Definição de **paleta com 8 cores** e **5 níveis tipográficos**;
+* Layout responsivo com **Flexbox e Grid**;
+* Criação de **menu hambúrguer** para mobile;
+* Organização do projeto em pastas (`css/`, `imagens-da-ong/`, `paginas/`).
+
+---
+
+### ⚙️ Etapa 3 — JavaScript e Interatividade (SPA)
+
+* Implementação de um sistema **Single Page Application (SPA)**;
+* Manipulação dinâmica do DOM e carregamento de seções sem recarregar a página;
+* **Validação de formulários** e avisos de erro ao usuário;
+* **Máscaras automáticas** para telefone e CEP (`mascaras.js`);
+* Uso de **armazenamento local (localStorage)** para simular persistência de dados.
+
+---
+
+### 🌙 Etapa 4 — Acessibilidade, Tema Escuro e Versionamento
+
+* Implementação de **modo escuro (dark mode)** com alternância visual;
+* Conformidade com **WCAG 2.1 Nível AA**:
+
+  * Contraste mínimo 4.5:1;
+  * Navegação por teclado e foco visível;
+  * Textos alternativos (`alt`, `aria-label`, `role`);
+* Compressão de imagens e minificação de CSS/JS;
+* Controle de versão com **Git/GitHub** e commits semânticos.
+
+---
+
+## 🗂️ Estrutura de Pastas
+
+```
+Projeto-ong-caminho-de-volta/
+│
+├── css/
+│   └── style.css
+├── JS/
+│   ├── script.js
+│   └── mascaras.js
+├── imagens-da-ong/
+├── paginas/
+│   ├── sobre.html
+│   ├── projetos.html
+│   ├── voluntariado.html
+│   ├── doacoes.html
+│   └── contato.html
+└── index.html
+```
+
+---
+
+## 🧠 Tecnologias Utilizadas
+
+* **HTML5** — Estrutura semântica;
+* **CSS3** — Design System, Responsividade e Dark Mode;
+* **JavaScript (ES6)** — SPA, DOM, Eventos e Validações;
+* **Git & GitHub** — Versionamento e histórico de etapas.
+
+---
+
+## 💡 Funcionalidades Principais
+
+* Navegação SPA sem recarregar a página;
+* Validação de formulários com máscaras dinâmicas;
+* Tema claro/escuro com contraste acessível;
+* Layout responsivo (mobile-first);
+* Animações e feedback visual em botões e links.
+
+---
+
+## 🔍 Acessibilidade
+
+* Navegação por teclado com foco visível;
+* Textos alternativos em todas as imagens;
+* Cores com contraste mínimo de 4.5:1;
+* Estrutura semântica com `main`, `section`, `nav`, `footer`;
+* Suporte a leitores de tela (`aria-label`, `role`, `alt`).
+
+---
+
+## 🚀 Versionamento
+
+* Branch principal: `main`;
+* Commits semânticos (`feat:`, `fix:`, `docs:`, `style:` etc.);
+* Histórico completo das Etapas 1 a 4;
+* Repositório com estrutura organizada e documentada.
+
+---
+
+## 📜 Deploy
+
+O projeto foi publicado com **GitHub Pages**:
+🔗 [https://arthur24-star.github.io/Projeto-ong-caminho-de-volta/](https://arthur24-star.github.io/Projeto-ong-caminho-de-volta/)
+
+---
+
+## 🧾 Autor
+
+**Arthur Fernando Rodrigues Fonseca**
+Estudante de Análise e Desenvolvimento de Sistemas
+📎 [GitHub](https://github.com/mucamuel) | [LinkedIn](https://www.linkedin.com/in/samuel-do-carmo-37707b324/)
